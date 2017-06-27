@@ -6,6 +6,7 @@ package uk.dreamr.rhdev.dreamrsupportkit;
 
 public class SupportEndPoint {
     private final String url;
+    private static String URL_test;
 
     public SupportEndPoint(final String url){
         this.url = url;

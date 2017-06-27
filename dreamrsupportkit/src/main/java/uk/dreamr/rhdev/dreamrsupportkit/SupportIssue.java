@@ -16,6 +16,43 @@ public class SupportIssue {
     private String body;
     private issue issue;
 
-    
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public SupportIssue.issue getIssue() {
+        return issue;
+    }
+
+    public void setIssue(SupportIssue.issue issue) {
+        this.issue = issue;
+    }
 }
