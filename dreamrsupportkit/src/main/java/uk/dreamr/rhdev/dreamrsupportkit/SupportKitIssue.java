@@ -4,7 +4,7 @@ package uk.dreamr.rhdev.dreamrsupportkit;
  * Created by Jack on 27/06/2017.
  */
 
-public class SupportIssue {
+public class SupportKitIssue {
 
     public enum issue{
         PAYMENT, BUG, LEGAL, FEEDBACK
@@ -48,11 +48,11 @@ public class SupportIssue {
         this.body = body;
     }
 
-    public SupportIssue.issue getIssue() {
+    public SupportKitIssue.issue getIssue() {
         return issue;
     }
 
-    public void setIssue(SupportIssue.issue issue) {
+    public void setIssue(SupportKitIssue.issue issue) {
         this.issue = issue;
     }
 }
