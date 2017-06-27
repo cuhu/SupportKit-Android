@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    >
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/support_kit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="10dp"
+        android:text="@string/get_support"/>
+    <TextView
+        android:id="@+id/support_kit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/support_kit_title"
+        android:layout_marginBottom="10dp"
+        android:text="description"/>
+
+    <LinearLayout
+        android:id="@+id/support_kit_body"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/support_kit_description">
+        <ListView
+            android:id="@+id/support_kit_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+        <EditText
+            android:id="@+id/support_kit_issue_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/what_issue"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
 
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/support_kit_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/support_kit_body"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:id="@+id/support_kit_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"/>
+        <Button
+            android:id="@+id/support_kit_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

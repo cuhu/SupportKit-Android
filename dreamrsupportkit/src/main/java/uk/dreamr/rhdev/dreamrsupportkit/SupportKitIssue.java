@@ -6,15 +6,11 @@ package uk.dreamr.rhdev.dreamrsupportkit;
 
 public class SupportKitIssue {
 
-    public enum issue{
-        PAYMENT, BUG, LEGAL, FEEDBACK
-    }
-
     private String title;
     private String subject;
     private String message;
     private String body;
-    private issue issue;
+    private SupportKitConstants.issue issue;
 
     public String getTitle() {
         return title;
@@ -48,11 +44,11 @@ public class SupportKitIssue {
         this.body = body;
     }
 
-    public SupportKitIssue.issue getIssue() {
+    public SupportKitConstants.issue getIssue() {
         return issue;
     }
 
-    public void setIssue(SupportKitIssue.issue issue) {
+    public void setIssue(SupportKitConstants.issue issue) {
         this.issue = issue;
     }
 }

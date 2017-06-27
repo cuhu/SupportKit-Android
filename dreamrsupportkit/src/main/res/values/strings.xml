@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DreamrSupportKit</string>
+    <string name="what_issue">What seems to be the issue?</string>
+    <string name="get_support">Get Support</string>
 </resources>
