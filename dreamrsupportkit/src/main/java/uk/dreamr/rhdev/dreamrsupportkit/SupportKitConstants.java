@@ -42,4 +42,7 @@ public class SupportKitConstants {
         return ISSUE_MAP;
     }
 
+    public static final String RESULT_SUCCESS = "success";
+    public static final String RESULT_FAILURE = "failure"; // TODO what is this is normally
+
 }
