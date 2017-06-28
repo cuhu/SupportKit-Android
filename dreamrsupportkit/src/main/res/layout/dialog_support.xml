@@ -10,8 +10,11 @@
     >
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp" />
+        android:id="@+id/support_kit_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_back_arrow"
+        android:visibility="gone"/>
     <TextView
         android:id="@+id/support_kit_title"
         android:layout_width="match_parent"
@@ -19,6 +22,8 @@
         android:textStyle="bold"
         android:textColor="#212121"
         android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/support_kit_arrow"
+        android:layout_marginStart="10dp"
         android:text="@string/get_support"/>
     <TextView
         android:id="@+id/support_kit_description"
@@ -26,6 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/support_kit_title"
         android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/support_kit_arrow"
+        android:layout_marginStart="10dp"
         android:text="description"/>
 
     <LinearLayout
@@ -66,6 +73,7 @@
             android:id="@+id/support_kit_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="Send"/>
 
 

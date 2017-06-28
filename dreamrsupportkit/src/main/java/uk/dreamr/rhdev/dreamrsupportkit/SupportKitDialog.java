@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class SupportKitDialog extends DialogFragment {
     private TextView txtDescription;
     private ListView listView;
     private EditText editIssue;
+    private ImageView btnArrow;
     private Button btnCancel;
     private Button btnSend;
     private int issueSelected = -1;
@@ -43,9 +45,11 @@ public class SupportKitDialog extends DialogFragment {
         txtTitle = (TextView) view.findViewById(R.id.support_kit_title);
         txtDescription= (TextView) view.findViewById(R.id.support_kit_description);
         editIssue = (EditText) view.findViewById(R.id.support_kit_issue_text);
+        btnArrow = (ImageView) view.findViewById(R.id.support_kit_arrow);
         setupList(view);
-        setupCancel(view);
-        setupResponseHandler();
+        setupButtons(view);
+        setResponseHandler();
+
     }
     private void setupList(View view){
         listView = (ListView) view.findViewById(R.id.support_kit_list);
@@ -60,7 +64,7 @@ public class SupportKitDialog extends DialogFragment {
         });
     }
 
-    private void setupCancel(View view){
+    private void setupButtons(View view){
         btnCancel = (Button) view.findViewById(R.id.support_kit_cancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,9 +87,16 @@ public class SupportKitDialog extends DialogFragment {
                 }
             }
         });
+        btnArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showListOrIssue(false,null);
+            }
+        });
     }
 
-    private void setupResponseHandler(){
+    private void
+        setResponseHandler(){
         SupportKitEndPoint.getInstance().setSupportKitResponse(new SupportKitResponse() {
             @Override
             public void errorCaught(String error) {
@@ -109,8 +120,13 @@ public class SupportKitDialog extends DialogFragment {
         if(showIssue){
             listView.setVisibility(View.GONE);
             editIssue.setVisibility(View.VISIBLE);
+            btnArrow.setVisibility(View.VISIBLE);
+            btnSend.setVisibility(View.VISIBLE);
+
         }else{
             editIssue.setVisibility(View.GONE);
+            btnArrow.setVisibility(View.GONE);
+            btnSend.setVisibility(View.GONE);
             listView.setVisibility(View.VISIBLE);
             issueSelected = -1; // resetting value to default if clicked wrong catagory
         }
