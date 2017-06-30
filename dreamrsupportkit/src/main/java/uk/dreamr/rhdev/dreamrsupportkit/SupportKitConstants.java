@@ -1,5 +1,6 @@
 package uk.dreamr.rhdev.dreamrsupportkit;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -18,31 +19,16 @@ public class SupportKitConstants {
     public static final String ISSUE_LEGAL_NAME = "legal";
     public static final String ISSUE_FEEDBACK = "I have some feedback";
     public static final String ISSUE_FEEDBACK_NAME = "feedback";
-    public static final String ISSUE_DESCRIPTION = "Please select an issue to report";
-    public enum issue{
-        PAYMENT, BUG, LEGAL, FEEDBACK
-    }
-
-    public static final String[] ISSUES = new String[]{
-            ISSUE_FEEDBACK,
-            ISSUE_BUG,
-            ISSUE_PAYMENT,
-            ISSUE_LEGAL
-    };
-    private static HashMap<String,String> ISSUE_MAP;
-
-    public static HashMap<String,String> getIssueMap(){
-        if(ISSUE_MAP == null){
-            ISSUE_MAP = new HashMap<>();
-            ISSUE_MAP.put(ISSUE_FEEDBACK, ISSUE_FEEDBACK_NAME);
-            ISSUE_MAP.put(ISSUE_BUG, ISSUE_BUG_NAME);
-            ISSUE_MAP.put(ISSUE_PAYMENT, ISSUE_PAYMENT_NAME);
-            ISSUE_MAP.put(ISSUE_LEGAL, ISSUE_LEGAL_NAME);
-        }
-        return ISSUE_MAP;
-    }
 
     public static final String RESULT_SUCCESS = "success";
     public static final String RESULT_FAILURE = "failure"; // TODO what is this is normally
+
+    public static final int COLOUR_TYPE_PRIMARY = 1001;
+    public static final int COLOUR_TYPE_PRIMARYDARK = 1002;
+    public static final int COLOUR_TYPE_ACCENT = 1003;
+
+    public static final String SUPPORTKIT_ISSUES_LIST = "supportkit_issues_list";
+    public static final String SUPPORTKIT_ISSUE_MESSAGES_LIST = "supportkit_issue_messages_list";
+    public static final String SUPPORTKIT_EMAIL = "supportkit_email";
 
 }

@@ -1,54 +1,36 @@
 package uk.dreamr.rhdev.dreamrsupportkit;
 
+import java.util.ArrayList;
+
 /**
  * Created by Jack on 27/06/2017.
  */
 
 public class SupportKitIssue {
+    private ArrayList<String> issues;
+    private ArrayList<String> issueMessage;
 
-    private String title;
-    private String subject;
-    private String message;
-    private String body;
-    private SupportKitConstants.issue issue;
-
-    public String getTitle() {
-        return title;
+    public SupportKitIssue(ArrayList<String> issues, ArrayList<String> issueMessage) {
+        this.issues = issues;
+        this.issueMessage = issueMessage;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public SupportKitIssue() {
+        this.issues = new ArrayList<>();
+        this.issueMessage = new ArrayList<>();
     }
 
-    public String getSubject() {
-        return subject;
+    public void addIssue(String issueMessage, String issueType){
+        issues.add(issueType);
+        this.issueMessage.add(issueMessage);
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public ArrayList<String> getIssues() {
+        return issues;
     }
 
-    public String getMessage() {
-        return message;
+    public ArrayList<String> getIssueMessages() {
+        return issueMessage;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public SupportKitConstants.issue getIssue() {
-        return issue;
-    }
-
-    public void setIssue(SupportKitConstants.issue issue) {
-        this.issue = issue;
-    }
 }

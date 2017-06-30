@@ -19,8 +19,18 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SupportKitBuilder.getInstance().setBaseUrl("exampleUrl");
-                SupportKitBuilder.getInstance().show(getFragmentManager());
+                /**
+                 * addIssues - adds custom issues and tags. There are some defaults if left blank
+                 *          defaults are :
+                 *                 - feedback
+                 *                 - payment
+                 *                 - bug
+                 *                 - legal
+                 */
+                SupportKitBuilder supportKitBuilder = new SupportKitBuilder();
+                //supportKitBuilder.addIssue("I have some feedback", "feedback");
+                //supportKitBuilder.addIssue("I found a bug", "bug");
+                supportKitBuilder.setEmailTo("Example.email@gmail.com").show(getFragmentManager());
             }
         });
 

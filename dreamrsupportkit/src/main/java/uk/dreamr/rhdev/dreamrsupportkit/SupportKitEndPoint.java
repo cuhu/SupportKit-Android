@@ -72,7 +72,7 @@ public class SupportKitEndPoint {
         }
     }
 
-    public void postIssue(String issueType, String issueDescription) {
+    public void postIssue(Context context, String issueType, String issueDescription) {
         if (baseUrl == null) {
             Log.e(SupportKitConstants.SUPPORTKIT_LOG, "Could not post issue, no url provided");
             return;
@@ -110,6 +110,7 @@ public class SupportKitEndPoint {
 
                 }
             });
+            addToRequestQueue(context, jsonObjectRequest,null);
         } catch (JSONException e) {
             Log.e(SupportKitConstants.SUPPORTKIT_LOG, "Could not create request");
             e.printStackTrace();

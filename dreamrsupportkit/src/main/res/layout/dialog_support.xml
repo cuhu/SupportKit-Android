@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/support_kit_arrow"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/ic_back_arrow"
         android:visibility="gone"/>
     <TextView
@@ -24,6 +24,7 @@
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@id/support_kit_arrow"
         android:layout_marginStart="10dp"
+        android:textSize="16sp"
         android:text="@string/get_support"/>
     <TextView
         android:id="@+id/support_kit_description"
@@ -33,7 +34,8 @@
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@id/support_kit_arrow"
         android:layout_marginStart="10dp"
-        android:text="description"/>
+        android:textSize="16sp"
+        android:text="@string/issue_exp"/>
 
     <LinearLayout
         android:id="@+id/support_kit_body"
@@ -51,6 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/what_issue"
+            android:minHeight="200dp"
+            android:gravity="top"
             android:visibility="gone"
             />
 
