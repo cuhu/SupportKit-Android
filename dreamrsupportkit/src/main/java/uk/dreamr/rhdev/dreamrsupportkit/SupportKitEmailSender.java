@@ -7,7 +7,7 @@ import android.content.Intent;
  * Created by mylokaye on 28/06/2017.
  */
 
-public class SupportKitEmailSender {
+class SupportKitEmailSender {
 
     private SupportKitView view;
     private String emailAddressTo;

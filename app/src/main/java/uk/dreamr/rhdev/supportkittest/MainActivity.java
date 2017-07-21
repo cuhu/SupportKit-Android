@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 SupportKitBuilder supportKitBuilder = new SupportKitBuilder();
                 //supportKitBuilder.addIssue("I have some feedback", "feedback");
                 //supportKitBuilder.addIssue("I found a bug", "bug");
-                supportKitBuilder.setEmailTo("Example.email@gmail.com").show(getFragmentManager());
-
+                supportKitBuilder.setEmailTo("rh@dreamr.uk").show(getFragmentManager());
             }
         });
 
