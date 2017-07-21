@@ -247,8 +247,6 @@ public class SupportKitDialog extends DialogFragment implements SupportKitView{
     }
 
     private void styleButtons(Button btn){
-        //btn.setBackgroundColor(fetchColor(SupportKitConstants.COLOUR_TYPE_PRIMARY));
-        //btn.setTextColor((isColorDark(SupportKitConstants.COLOUR_TYPE_PRIMARY) ? getColourResource(R.color.androidWhite) : getColourResource(R.color.androidBlack)));
         btn.setBackgroundColor(Color.TRANSPARENT);
         btn.setTextColor(fetchColor(SupportKitConstants.COLOUR_TYPE_PRIMARY));
     }
