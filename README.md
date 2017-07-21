@@ -2,6 +2,7 @@ Support Kit by Dreamr
 =====================
 
 Simple support kit library that inserts a support dialog into your application. Users can select from a list of support options and send it using a client of their choice.
+
 ![Alt text](https://github.com/dreamr-uk/SupportKit-Android/blob/staging/gitsite/support1.png)
 ![Alt text](https://github.com/dreamr-uk/SupportKit-Android/blob/staging/gitsite/support2.png)
 
@@ -21,4 +22,12 @@ supportKitBuilder.setEmailTo("Example.email@gmail.com").show(getFragmentManager(
 Adding custom support options is done by adding an issue:
 ```java
 supportKitBuilder.addIssue("some custom support option", "IssueType");
+```
+
+Download
+--------
+```
+dependencies {
+    
+}
 ```
