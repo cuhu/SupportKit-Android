@@ -2,8 +2,8 @@ Support Kit by Dreamr
 =====================
 
 Simple support kit library that inserts a support dialog into your application. Users can select from a list of support options and send it using a client of their choice.
-![Alt text](/gitsite/support1?raw=true)
-![Alt text](/gitsite/support2?raw=true)
+![Alt text](https://github.com/dreamr-uk/SupportKit-Android/blob/staging/gitsite/support1.png)
+![Alt text](https://github.com/dreamr-uk/SupportKit-Android/blob/staging/gitsite/support2.png)
 
 Default support options are:
 * "I have an issue with payments"
