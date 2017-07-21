@@ -28,6 +28,6 @@ Download
 --------
 ```
 dependencies {
-    
+    compile 'com.github.dreamr-uk:SupportKit-Android:1.0.0'
 }
 ```
