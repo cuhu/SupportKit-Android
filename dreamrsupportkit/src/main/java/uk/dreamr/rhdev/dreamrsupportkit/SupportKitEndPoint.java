@@ -18,7 +18,7 @@ import org.json.JSONObject;
  * Created by Jack on 27/06/2017.
  */
 
-public class SupportKitEndPoint {
+class SupportKitEndPoint {
 
     private static SupportKitEndPoint instance;
     private String baseUrl;

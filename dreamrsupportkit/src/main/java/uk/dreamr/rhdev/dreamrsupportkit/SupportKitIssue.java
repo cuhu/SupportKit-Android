@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Jack on 27/06/2017.
  */
 
-public class SupportKitIssue {
+class SupportKitIssue {
     private ArrayList<String> issues;
     private ArrayList<String> issueMessage;
 

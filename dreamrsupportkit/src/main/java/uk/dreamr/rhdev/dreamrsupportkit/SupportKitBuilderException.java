@@ -4,7 +4,7 @@ package uk.dreamr.rhdev.dreamrsupportkit;
  * Created by mylokaye on 28/06/2017.
  */
 
-public class SupportKitBuilderException extends RuntimeException{
+class SupportKitBuilderException extends RuntimeException{
 
     private String message;
     private Throwable cause;

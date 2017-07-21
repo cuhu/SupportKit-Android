@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by mylokaye on 30/06/2017.
  */
 
-public class SupportKitListAdapter extends ArrayAdapter<String> {
+class SupportKitListAdapter extends ArrayAdapter<String> {
 
     private LayoutInflater inflater;
     private ArrayList<String> issues;

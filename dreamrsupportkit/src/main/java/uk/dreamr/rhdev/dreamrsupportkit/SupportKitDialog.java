@@ -135,7 +135,7 @@ public class SupportKitDialog extends DialogFragment implements SupportKitView{
         });
     }
     /*
-    when sending api
+    when sending api todo - setup to use default api endpoint
     SupportKitEndPoint.getInstance().postIssue(
                             getCorrectContext(),
                             issues.getIssues().get(issueSelected),
@@ -146,24 +146,11 @@ public class SupportKitDialog extends DialogFragment implements SupportKitView{
     @Override
     public void launchIntent(Intent emailIntent) {
         try {
-            startActivityForResult(Intent.createChooser(emailIntent, "Send mail"), REQUEST_SEND_MAIL);
+            startActivity(Intent.createChooser(emailIntent, "Send mail"));
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(getCorrectContext(), "There are no email applications installed.", Toast.LENGTH_SHORT).show();
         }
     }
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        switch (requestCode) {
-            case REQUEST_SEND_MAIL:
-                // When the request to send mail returns
-                if (resultCode == Activity.RESULT_OK) {
-                    Toast.makeText(getCorrectContext(), "message successfully sent", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(getCorrectContext(), "sorry", Toast.LENGTH_SHORT).show();
-                }
-
-        }}
 
     private void
         setResponseHandler(){

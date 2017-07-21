@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Created by Jack on 27/06/2017.
  */
 
-public class SupportKitConstants {
+class SupportKitConstants {
     public static final String SUPPORTKIT_LOG = "SupportKitLogs";
 
     // types of issue

@@ -19,9 +19,6 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
-dependencies {
-    //compile 'com.github.dreamr-uk:SupportKit-Android:staging-SNAPSHOT'
-}
 
 
 task clean(type: Delete) {
